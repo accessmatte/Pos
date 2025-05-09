@@ -1,0 +1,1354 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="text-2.css" />
+<script src="text.js"></script>
+</head>
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+     <a onclick="categories()">categories</a>
+    <a onclick="Service()">Services</a>
+    <a onclick="sitemap()">sitemap</a>
+    <a onclick="contact()">Contact</a>
+        <br>
+  &nbsp;&nbsp;<i onclick="wa()" style="font-size:50px; background-color:#2be784; text-align:center;width:50px;color:white;" class="fa">&#xf232;</i>&nbsp;&nbsp;<i onclick="fb()" style="text-align:center;font-size:50px; width:50px;background-color:#468de7; color:white;" class="fa">&#xf09a;</i><br/><br/>&nbsp;&nbsp;<i onclick="yt()"style="font-size:50px; text-align:center;width:50px;background-color:white; color:red;" class="fa">&#xf16a;</i> &nbsp;&nbsp;<i onclick="inst()" style="font-size:50px; text-align:center;background-color:white; width:50px;color:#f8296c65;" class="fa">&#xf16d;</i>
+  </div>
+</div>
+<header>
+<img style="width:100%;" src="https://loveantech.wordpress.com/wp-content/uploads/2025/05/inshot_20250507_123917084967625167065725476.jpg">
+<div class="nav-bar">
+    <ul>
+      <li><a onclick="openNav()">&#9776;</a></li>
+      <li><a onclick="home()"><i class="fa fa-home"></i></a></li>
+      <li><a onclick="user()"><i class="fa fa-user"></i></a></li>
+      <li><a onclick="cart()"><i class="fa fa-shopping-cart"></i></a></li>
+    </ul>
+  </div></header><br><br><br><br><br><br><br><br><br><body onload="save()">
+<form>
+<input type="alphabate" name="age" id="age"> 
+<button style="width:40%; height:40px;" type="button" id="submit"> SEARCH</button>
+</form><br><table>
+<thead>
+<tr>
+<th>id</th>   
+<th>product</th>
+<th>Quantity</th>    
+<th>Price</th>
+<th>status</th>   
+<th>action</th>
+</tr>
+</thead>  
+<tbody>
+<tr>
+<td id ="demo" class="card-title shop-item-id"></td>   
+<td id ="memo" class="card-title shop-item-title"></td>      
+<td id ="nemo" contenteditable></td>   
+<td id ="kemo" class="card-text shop-item-price"></td>
+<td id ="lemo"></td>      
+<td><button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">sell</button></td>
+</tr>
+</tbody>
+</table> <br><br>
+<section class="container content-section" id="shopping-cart">
+  
+  <h3 style="text-decoration: underline;text-align: center; margin-bottom: 7%;">Sale recipt</h3>
+ 
+ <table class="table table-hover table-cart">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>Item</th>
+      <th>Price</th>
+      <th>Quantity</th>
+    </tr>
+  </thead>
+  <tbody class="cart-items">
+    
+     
+  </tbody>
+</table>
+<br><br>
+    <div class="cart-total"> 
+      <strong class="cart-total-title">Total</strong>
+      <span  class="cart-total-price" style="text-align: right;">$0</span>
+    </div>
+ 
+
+    <div class="btn-purchase" style="margin-top: 10%;">
+      <button type="button"  class="btn btn-dark btn-purchase "><i class="fa-solid fa-cart-shopping " style="margin-right: 6%;"></i>PURCHASE</button>
+    </div>
+
+</section><!--External JS-->
+<script src="script.js"></script><br><br>
+<div style="height:auto; background-color: #1b1576;"><br>
+  <h1 style="color: #62b6b6; text-align: center;">ACCESMAT</h1>
+<a style="color:#ffffff;" href="tel:0758400124"><li><b>Tell:</b>0758400124 </li></a>
+  <hr >
+   <a style="color:#ffffff;" href="tel:0759415478"><li><b>Tell:</b>0759415478</li></a>
+   <hr/>
+      <a style="color:#ffffff;" href="mailto:ochienge622@gmail.com"><li><b>email:</b>ochienge622@gmail.com</li></a>
+      <hr/>
+    <li onclick="sitemap()" style="color:#ffffff;">Nanyuki,kenya</li>
+    <br>
+    &nbsp;&nbsp;<i onclick="wa()" style="font-size:50px; background-color:#2be784; text-align:center;width:50px;color:white;" class="fa">&#xf232;</i>&nbsp;&nbsp;<i onclick="fb()" style="text-align:center;font-size:50px; width:50px;background-color:#468de7; color:white;" class="fa">&#xf09a;</i>&nbsp;&nbsp;<i onclick="yt()"style="font-size:50px; text-align:center;width:50px;background-color:white; color:red;" class="fa">&#xf16a;</i> &nbsp;&nbsp;<i onclick="inst()" style="font-size:50px; text-align:center;background-color:white; width:50px;color:#f8296c65;" class="fa">&#xf16d;</i>
+<br>
+ <h1 style="color: #f7ec94;">INFOMATION</h1>
+ <a onclick="account()" style="color:#ffffff;"><b>My account</b></a>
+ <hr/>
+  <a onclick="policy()" style="color:#ffffff;"><b>privancy policy</b></a><hr/>
+ <a onclick="terms()" style="color:#ffffff;"><b>Terms & Conditions</b></a><hr/>
+  <a onclick="return()" style="color:#ffffff;"><b>Return policy</b></a><hr/>
+   <a onclick="contact()" style="color:#ffffff;"><b>Contact Us</b></a>
+</div>
+<div style="height:auto; background-color: #000000; color:#ffffff;">Copyright 2024 © ACCESMAT Nanyuki,Kenya<br> All Rights Reserved.</div></body>
+<script type="text/javascript">
+  function cart(){
+ if (localStorage.getItem("a") == "carta"){
+   document.getElementById("a").innerHTML="<td>"+localStorage.getItem("aa")+"</td>"+"<td>"+localStorage.getItem("ab")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity1")+"</td>";
+ } 
+   if (localStorage.getItem("b")== "cartb"){
+   document.getElementById("b").innerHTML="<td>"+localStorage.getItem("ba")+"</td>"+"<td>"+localStorage.getItem("bb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity2")+"</td>";}
+   if (localStorage.getItem("c")== "cartc"){
+   document.getElementById("c").innerHTML="<td>"+localStorage.getItem("ca")+"</td>"+"<td>"+localStorage.getItem("cb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity3")+"</td>";} 
+   if (localStorage.getItem("d")== "cartd"){
+   document.getElementById("d").innerHTML="<td>"+localStorage.getItem("da")+"</td>"+"<td>"+localStorage.getItem("db")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity4")+"</td>";}
+   if (localStorage.getItem("e")== "carte"){
+   document.getElementById("e").innerHTML="<td>"+localStorage.getItem("ea")+"</td>"+"<td>"+localStorage.getItem("eb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity5")+"</td>";}
+   if (localStorage.getItem("f")== "cartf"){
+   document.getElementById("f").innerHTML="<td>"+localStorage.getItem("fa")+"</td>"+"<td>"+localStorage.getItem("fb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity6")+"</td>";}
+   if (localStorage.getItem("g")== "cartg"){
+   document.getElementById("g").innerHTML="<td>"+localStorage.getItem("ga")+"</td>"+"<td>"+localStorage.getItem("gb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity7")+"</td>";}
+   if (localStorage.getItem("h")== "carth"){
+   document.getElementById("h").innerHTML="<td>"+localStorage.getItem("ha")+"</td>"+"<td>"+localStorage.getItem("hb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity8")+"</td>";}
+   if (localStorage.getItem("i")== "carti"){
+   document.getElementById("i").innerHTML="<td>"+localStorage.getItem("ia")+"</td>"+"<td>"+localStorage.getItem("ib")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity9")+"</td>";}
+   if (localStorage.getItem("j")== "cartj"){
+   document.getElementById("j").innerHTML="<td>"+localStorage.getItem("ja")+"</td>"+"<td>"+localStorage.getItem("jb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity10")+"</td>";}
+   if (localStorage.getItem("k")== "cartk"){
+   document.getElementById("k").innerHTML="<td>"+localStorage.getItem("ka")+"</td>"+"<td>"+localStorage.getItem("kb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity11")+"</td>";}
+   if (localStorage.getItem("l")== "cartl"){
+   document.getElementById("l").innerHTML="<td>"+localStorage.getItem("la")+"</td>"+"<td>"+localStorage.getItem("lb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity12")+"</td>";}
+   if (localStorage.getItem("m")== "cartm"){
+   document.getElementById("m").innerHTML="<td>"+localStorage.getItem("ma")+"</td>"+"<td>"+localStorage.getItem("mb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity13")+"</td>";}
+   if (localStorage.getItem("n")== "cartn"){
+   document.getElementById("n").innerHTML="<td>"+localStorage.getItem("na")+"</td>"+"<td>"+localStorage.getItem("nb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity14")+"</td>";}
+   if (localStorage.getItem("o")== "carto"){
+   document.getElementById("o").innerHTML="<td>"+localStorage.getItem("oa")+"</td>"+"<td>"+localStorage.getItem("ob")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity15")+"</td>";}
+   if (localStorage.getItem("p")== "cartp"){
+   document.getElementById("p").innerHTML="<td>"+localStorage.getItem("pa")+"</td>"+"<td>"+localStorage.getItem("pb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity16")+"</td>";}
+   if (localStorage.getItem("q")== "cartq"){
+   document.getElementById("q").innerHTML="<td>"+localStorage.getItem("qa")+"</td>"+"<td>"+localStorage.getItem("qb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity17")+"</td>";}
+   if (localStorage.getItem("r")== "cartr"){
+   document.getElementById("r").innerHTML="<td>"+localStorage.getItem("ra")+"</td>"+"<td>"+localStorage.getItem("rb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity18")+"</td>";}
+   if (localStorage.getItem("s")== "carts"){
+   document.getElementById("s").innerHTML="<td>"+localStorage.getItem("sa")+"</td>"+"<td>"+localStorage.getItem("sb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity19")+"</td>";}
+   if (localStorage.getItem("t")== "cartt"){
+   document.getElementById("t").innerHTML="<td>"+localStorage.getItem("ta")+"</td>"+"<td>"+localStorage.getItem("tb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity20")+"</td>";}
+   if (localStorage.getItem("u")== "cartu"){
+   document.getElementById("u").innerHTML="<td>"+localStorage.getItem("ua")+"</td>"+"<td>"+localStorage.getItem("ub")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity21")+"</td>";}
+   if (localStorage.getItem("v")== "cartv"){
+   document.getElementById("v").innerHTML="<td>"+localStorage.getItem("va")+"</td>"+"<td>"+localStorage.getItem("vb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity22")+"</td>";}
+   if (localStorage.getItem("w")== "cartw"){
+   document.getElementById("w").innerHTML="<td>"+localStorage.getItem("wa")+"</td>"+"<td>"+localStorage.getItem("wb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity23")+"</td>";}
+   if (localStorage.getItem("x")== "cartx"){
+   document.getElementById("x").innerHTML="<td>"+localStorage.getItem("xa")+"</td>"+"<td>"+localStorage.getItem("xb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity24")+"</td>";}
+   if (localStorage.getItem("y")== "carty"){
+   document.getElementById("y").innerHTML="<td>"+localStorage.getItem("ya")+"</td>"+"<td>"+localStorage.getItem("yb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity25")+"</td>";}
+   if (localStorage.getItem("z")== "cartz"){
+   document.getElementById("z").innerHTML="<td>"+localStorage.getItem("za")+"</td>"+"<td>"+localStorage.getItem("zb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity26")+"</td>";}
+   if (localStorage.getItem("a1")== "carta1"){
+   document.getElementById("a1").innerHTML="<td>"+localStorage.getItem("ae")+"</td>"+"<td>"+localStorage.getItem("af")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity27")+"</td>";}
+   if (localStorage.getItem("b1")== "cartb1"){
+   document.getElementById("b1").innerHTML="<td>"+localStorage.getItem("be")+"</td>"+"<td>"+localStorage.getItem("bf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity28")+"</td>";}
+   if (localStorage.getItem("c1")== "cartc1"){
+   document.getElementById("c1").innerHTML="<td>"+localStorage.getItem("ce")+"</td>"+"<td>"+localStorage.getItem("cf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity29")+"</td>";}
+   if (localStorage.getItem("d1")== "cartd1"){
+   document.getElementById("d1").innerHTML="<td>"+localStorage.getItem("de")+"</td>"+"<td>"+localStorage.getItem("df")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity30")+"</td>";}
+   if (localStorage.getItem("e1")== "carte1"){
+   document.getElementById("e1").innerHTML="<td>"+localStorage.getItem("ee")+"</td>"+"<td>"+localStorage.getItem("ef")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity31")+"</td>";}
+   if (localStorage.getItem("f1")== "cartf1"){
+   document.getElementById("f1").innerHTML="<td>"+localStorage.getItem("fe")+"</td>"+"<td>"+localStorage.getItem("ff")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity32")+"</td>";}
+   if (localStorage.getItem("g1")== "cartg1"){
+   document.getElementById("g1").innerHTML="<td>"+localStorage.getItem("ge")+"</td>"+"<td>"+localStorage.getItem("gf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity33")+"</td>";}
+   if (localStorage.getItem("h1")== "carth1"){
+   document.getElementById("h1").innerHTML="<td>"+localStorage.getItem("he")+"</td>"+"<td>"+localStorage.getItem("hf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity34")+"</td>";}
+   if (localStorage.getItem("i1")== "carti1"){
+   document.getElementById("i1").innerHTML="<td>"+localStorage.getItem("ie")+"</td>"+"<td>"+localStorage.getItem("if")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity35")+"</td>";}
+   if (localStorage.getItem("j1")== "cartj1"){
+   document.getElementById("j1").innerHTML="<td>"+localStorage.getItem("je")+"</td>"+"<td>"+localStorage.getItem("jf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity36")+"</td>";}
+   if (localStorage.getItem("k1")== "cartk1"){
+   document.getElementById("k1").innerHTML="<td>"+localStorage.getItem("ke")+"</td>"+"<td>"+localStorage.getItem("kf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity37")+"</td>";}
+   if (localStorage.getItem("l1")== "cartl1"){
+   document.getElementById("l1").innerHTML="<td>"+localStorage.getItem("le")+"</td>"+"<td>"+localStorage.getItem("lf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity38")+"</td>";}
+   if (localStorage.getItem("m1")== "cartm1"){
+   document.getElementById("m1").innerHTML="<td>"+localStorage.getItem("me")+"</td>"+"<td>"+localStorage.getItem("mf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity39")+"</td>";}
+   if (localStorage.getItem("n1")== "cartn1"){
+   document.getElementById("n1").innerHTML="<td>"+localStorage.getItem("ne")+"</td>"+"<td>"+localStorage.getItem("nf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity40")+"</td>";}
+   if (localStorage.getItem("o1")== "carto1"){
+   document.getElementById("o1").innerHTML="<td>"+localStorage.getItem("oe")+"</td>"+"<td>"+localStorage.getItem("of")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity41")+"</td>";}
+   if (localStorage.getItem("p1")== "cartp1"){
+   document.getElementById("p1").innerHTML="<td>"+localStorage.getItem("pe")+"</td>"+"<td>"+localStorage.getItem("pf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity42")+"</td>";}
+   if (localStorage.getItem("q1")== "cartq1"){
+   document.getElementById("q1").innerHTML="<td>"+localStorage.getItem("qe")+"</td>"+"<td>"+localStorage.getItem("qf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity43")+"</td>";}
+   if (localStorage.getItem("r1")== "cartr1"){
+   document.getElementById("r1").innerHTML="<td>"+localStorage.getItem("re")+"</td>"+"<td>"+localStorage.getItem("rf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity44")+"</td>";}
+   if (localStorage.getItem("s1")== "carts1"){
+   document.getElementById("s1").innerHTML="<td>"+localStorage.getItem("se")+"</td>"+"<td>"+localStorage.getItem("sf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity45")+"</td>";}
+   if (localStorage.getItem("t1")== "cartt1"){
+   document.getElementById("t1").innerHTML="<td>"+localStorage.getItem("te")+"</td>"+"<td>"+localStorage.getItem("tf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity46")+"</td>";}
+   if (localStorage.getItem("u1")== "cartu1"){
+   document.getElementById("u1").innerHTML="<td>"+localStorage.getItem("ue")+"</td>"+"<td>"+localStorage.getItem("uf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity47")+"</td>";}
+   if (localStorage.getItem("v1")== "cartv1"){
+   document.getElementById("v1").innerHTML="<td>"+localStorage.getItem("ve")+"</td>"+"<td>"+localStorage.getItem("vf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity48")+"</td>";}
+   if (localStorage.getItem("w1")== "cartw1"){
+   document.getElementById("w1").innerHTML="<td>"+localStorage.getItem("we")+"</td>"+"<td>"+localStorage.getItem("wf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity49")+"</td>";}
+   if (localStorage.getItem("x1")== "cartx1"){
+   document.getElementById("x1").innerHTML="<td>"+localStorage.getItem("xe")+"</td>"+"<td>"+localStorage.getItem("xf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity50")+"</td>";}
+   }
+  function cleaar(){ 
+    const firstName = prompt("enter your password");
+    
+    if (firstName == "" || firstName == null) {
+      window.location.href = "Acount.html"
+    } else if(firstName == localStorage.getItem("pasword")) {
+ localStorage.removeItem("a")
+ localStorage.removeItem("aa")
+ localStorage.removeItem("ab")
+ localStorage.removeItem("quantity1")
+ localStorage.removeItem("b")
+ localStorage.removeItem("ba")
+ localStorage.removeItem("bb")
+ localStorage.removeItem("quantity2")
+ localStorage.removeItem("c")
+ localStorage.removeItem("ca")
+ localStorage.removeItem("cb")
+ localStorage.removeItem("quantity3") 
+ localStorage.removeItem("d")
+ localStorage.removeItem("da")
+ localStorage.removeItem("db")
+ localStorage.removeItem("quantity4")
+ localStorage.removeItem("e")
+ localStorage.removeItem("ea")
+ localStorage.removeItem("eb")
+ localStorage.removeItem("quantity5")
+ localStorage.removeItem("f")
+ localStorage.removeItem("fa")
+ localStorage.removeItem("fb")
+ localStorage.removeItem("quantity6")
+ localStorage.removeItem("g")
+ localStorage.removeItem("ga")
+ localStorage.removeItem("gb")
+ localStorage.removeItem("quantity7")
+ localStorage.removeItem("h")
+ localStorage.removeItem("ha")
+ localStorage.removeItem("hb")
+ localStorage.removeItem("quantity8")
+ localStorage.removeItem("i")
+ localStorage.removeItem("ia")
+ localStorage.removeItem("ib")
+ localStorage.removeItem("quantity9")
+ localStorage.removeItem("j")
+ localStorage.removeItem("ja")
+ localStorage.removeItem("jb")
+ localStorage.removeItem("quantity10")
+ localStorage.removeItem("k")
+ localStorage.removeItem("ka")
+ localStorage.removeItem("kb")
+ localStorage.removeItem("quantity11")
+ localStorage.removeItem("l")
+ localStorage.removeItem("la")
+ localStorage.removeItem("lb")
+ localStorage.removeItem("quantity12")
+ localStorage.removeItem("m")
+ localStorage.removeItem("ma")
+ localStorage.removeItem("mb")
+ localStorage.removeItem("quantity13")
+ localStorage.removeItem("n")
+ localStorage.removeItem("na")
+ localStorage.removeItem("nb")
+ localStorage.removeItem("quantity14")
+ localStorage.removeItem("o")
+ localStorage.removeItem("oa")
+ localStorage.removeItem("ob")
+ localStorage.removeItem("quantity15")
+ localStorage.removeItem("p")
+ localStorage.removeItem("pa")
+ localStorage.removeItem("pb")
+ localStorage.removeItem("quantity16")
+ localStorage.removeItem("q")
+ localStorage.removeItem("qa")
+ localStorage.removeItem("qb")
+ localStorage.removeItem("quantity17")
+ localStorage.removeItem("r")
+ localStorage.removeItem("ra")
+ localStorage.removeItem("rb")
+ localStorage.removeItem("quantity18")
+ localStorage.removeItem("s")
+ localStorage.removeItem("sa")
+ localStorage.removeItem("sb")
+ localStorage.removeItem("quantity19")
+ localStorage.removeItem("t")
+ localStorage.removeItem("ta")
+ localStorage.removeItem("tb")
+ localStorage.removeItem("quantity20")
+ localStorage.removeItem("u")
+ localStorage.removeItem("ua")
+ localStorage.removeItem("ub")
+ localStorage.removeItem("quantity21")
+ localStorage.removeItem("v")
+ localStorage.removeItem("va")
+ localStorage.removeItem("vb")
+ localStorage.removeItem("quantity22")
+ localStorage.removeItem("w")
+ localStorage.removeItem("wa")
+ localStorage.removeItem("wb")
+ localStorage.removeItem("quantity23")
+ localStorage.removeItem("x")
+ localStorage.removeItem("xa")
+ localStorage.removeItem("xb")
+ localStorage.removeItem("quantity24")
+ localStorage.removeItem("y")
+ localStorage.removeItem("ya")
+ localStorage.removeItem("yb")
+ localStorage.removeItem("quantity25")
+ localStorage.removeItem("z")
+ localStorage.removeItem("za")
+ localStorage.removeItem("zb")
+ localStorage.removeItem("quantity26")
+ localStorage.removeItem("a1")
+ localStorage.removeItem("ae")
+ localStorage.removeItem("af")
+ localStorage.removeItem("quantity27")
+ localStorage.removeItem("b1")
+ localStorage.removeItem("be")
+ localStorage.removeItem("bf")
+ localStorage.removeItem("quantity28")
+ localStorage.removeItem("c1")
+ localStorage.removeItem("ce")
+ localStorage.removeItem("cf")
+ localStorage.removeItem("quantity29")
+ localStorage.removeItem("d1")
+ localStorage.removeItem("de")
+ localStorage.removeItem("df")
+ localStorage.removeItem("quantity30")
+ localStorage.removeItem("e1")
+ localStorage.removeItem("ee")
+ localStorage.removeItem("ef")
+ localStorage.removeItem("quantity31")
+ localStorage.removeItem("f1")
+ localStorage.removeItem("fe")
+ localStorage.removeItem("ff")
+ localStorage.removeItem("quantity32")
+ localStorage.removeItem("g1")
+ localStorage.removeItem("ge")
+ localStorage.removeItem("gf")
+ localStorage.removeItem("quantity33")
+ localStorage.removeItem("h1")
+ localStorage.removeItem("he")
+ localStorage.removeItem("hf")
+ localStorage.removeItem("quantity34")
+ localStorage.removeItem("i1")
+ localStorage.removeItem("ie")
+ localStorage.removeItem("if")
+ localStorage.removeItem("quantity35")
+ localStorage.removeItem("j1")
+ localStorage.removeItem("je")
+ localStorage.removeItem("jf")
+ localStorage.removeItem("quantity36")
+ localStorage.removeItem("k1")
+ localStorage.removeItem("ke")
+ localStorage.removeItem("kf")
+ localStorage.removeItem("quantity37")
+ localStorage.removeItem("l1")
+ localStorage.removeItem("le")
+ localStorage.removeItem("lf")
+ localStorage.removeItem("quantity38")
+ localStorage.removeItem("m1")
+ localStorage.removeItem("me")
+ localStorage.removeItem("mf")
+ localStorage.removeItem("quantity39")
+ localStorage.removeItem("n1")
+ localStorage.removeItem("ne")
+ localStorage.removeItem("nf")
+ localStorage.removeItem("quantity40")
+ localStorage.removeItem("o1")
+ localStorage.removeItem("oe")
+ localStorage.removeItem("of")
+ localStorage.removeItem("quantity41")
+ localStorage.removeItem("p1")
+ localStorage.removeItem("pe")
+ localStorage.removeItem("pf")
+ localStorage.removeItem("quantity42")
+ localStorage.removeItem("q1")
+ localStorage.removeItem("qe")
+ localStorage.removeItem("qf")
+ localStorage.removeItem("quantity43")
+ localStorage.removeItem("r1")
+ localStorage.removeItem("re")
+ localStorage.removeItem("rf")
+ localStorage.removeItem("quantity44")
+ localStorage.removeItem("s1")
+ localStorage.removeItem("se")
+ localStorage.removeItem("sf")
+ localStorage.removeItem("quantity45")
+ localStorage.removeItem("t1")
+ localStorage.removeItem("te")
+ localStorage.removeItem("tf")
+ localStorage.removeItem("quantity46")
+ localStorage.removeItem("u1")
+ localStorage.removeItem("ue")
+ localStorage.removeItem("uf")
+ localStorage.removeItem("quantity47")
+ localStorage.removeItem("v1")
+ localStorage.removeItem("ve")
+ localStorage.removeItem("vf")
+ localStorage.removeItem("quantity48")
+ localStorage.removeItem("w1")
+ localStorage.removeItem("we")
+ localStorage.removeItem("wf")
+ localStorage.removeItem("quantity49")
+ localStorage.removeItem("x1")
+ localStorage.removeItem("xe")
+ localStorage.removeItem("xf")
+ localStorage.removeItem("quantity50")
+      document.getElementById("clea").addEventListener("click", function() {
+   const str1 = "<a href='https://api.callmebot.com/whatsapp.php?phone=254114955106&apikey=1304247&text="
+   const str2 = "'><button style='width: 100%; height: 50px;'>submit</button><a/>"
+   const table = document.getElementById("td").innerText
+   document.getElementById("clea").innerHTML =str1+table+str2; });
+    }else {
+      alert("incorrect password!!!")
+    }}
+   </script>
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "50%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+  <script type="text/javascript">
+    document.getElementById("submit").addEventListener("click", function() {
+  const imran=
+  document.getElementById("age").value;
+
+if (imran == localStorage.getItem("mihabag")){
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabag")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabah")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabai")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabaj")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabak")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabal")
+;}
+if (imran == localStorage.getItem("mihabam")){
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabam")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihaban")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabao")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabap")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabaq")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabar")
+;}
+if (imran == localStorage.getItem("mihabas")){
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabas")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabat")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabau")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabav")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabaw")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabax")
+;}
+if (imran == localStorage.getItem("mihabay")){
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabay")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabaz")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabba")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabbb")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabbc")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabbd")
+;}
+if (imran == localStorage.getItem("mihabbe")){
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabbe")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabbf")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabbg")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabbh")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabbi")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabbj")
+;}
+if (imran == localStorage.getItem("mihabbk")){
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabbk")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabbl")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabbm")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabbn")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabbo")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabbp")
+;}
+if (imran == localStorage.getItem("mihabbq")){
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabbq")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabbr")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabbs")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabbt")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabbu")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabbv");}
+if (imran == localStorage.getItem("mihabbw")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabbw")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabbx")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabby")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabbz")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabca")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabcb");}
+if (imran == localStorage.getItem("mihabcc")){
+
+
+
+
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabcc")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabcd")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabce")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabcf")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabcg")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabch");}
+if (imran == localStorage.getItem("mihabci")){
+
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabci")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabcj")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabck")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabcl")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabcm")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabcn");}
+if (imran == localStorage.getItem("mihabco")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabco")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabcp")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabcq")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabcr")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabcs")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabct");}
+if (imran == localStorage.getItem("mihabcu")){
+
+
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabcu")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabcv")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabcw")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabcx")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabcy")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabcz");}
+if (imran == localStorage.getItem("mihabda")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabda")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabdb")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabdc")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabdd")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabde")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabdf");}
+if (imran == localStorage.getItem("mihabdg")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabdg")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabdh")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabdi")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabdj")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabdk")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabdl");}
+if (imran == localStorage.getItem("mihabdm")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabdm")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabdn")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabdo")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabdp")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabdq")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabdr");}
+if (imran == localStorage.getItem("mihabds")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabds")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabdt")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabdu")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabdv")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabdw")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabdx");}
+if (imran == localStorage.getItem("mihabdy")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabdy")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabdz")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabea")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabeb")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabec")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabed");}
+if (imran == localStorage.getItem("mihabee")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabee")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabef")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabeg")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabeh")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabei")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabej");}
+if (imran == localStorage.getItem("mihabek")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabek")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabel")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabem")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihaben")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabeo")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabep");}
+if (imran == localStorage.getItem("mihabeq")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabeq")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihaber")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabes")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabet")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabeu")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabev");}
+if (imran == localStorage.getItem("mihabew")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabew")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabex")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabey")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabez")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabfa")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabfb");}
+if (imran == localStorage.getItem("mihabfc")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabfc")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabfd")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabfe")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabff")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabfg")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabfh");}
+if (imran == localStorage.getItem("mihabfi")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabfi")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabfj")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabfk")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabfl")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabfm")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabfn");}
+if (imran == localStorage.getItem("mihabfo")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabfo")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabfp")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabfq")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabfr")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabfs")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabft");}
+if (imran == localStorage.getItem("mihabfu")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabfu")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabfv")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabfw")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabfx")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabfy")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabfz");}
+if (imran == localStorage.getItem("mihabga")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabga")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabgb")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabgc")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabgd")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabge")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabgf");}
+if (imran == localStorage.getItem("mihabgg")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabgg")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabgh")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabgi")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabgj")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabgk")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabgl");}
+if (imran == localStorage.getItem("mihabgm")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabgm")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabgn")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabgo")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabgp")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabgq")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabgr");}
+if (imran == localStorage.getItem("mihabgs")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabgs")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabgt")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabgu")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabgv")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabgw")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabgx");}
+if (imran == localStorage.getItem("mihabgy")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabgy")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabgz")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabha")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabhb")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabhc")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabhd");}
+if (imran == localStorage.getItem("mihabhe")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabhe")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabhf")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabhg")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabhh")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabhi")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabhj");}
+if (imran == localStorage.getItem("mihabhk")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabhk")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabhl")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabhm")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabhn")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabho")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabhp");}
+if (imran == localStorage.getItem("mihabhq")){
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabhq")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabhr")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabhs")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabht")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabhu")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabhv");}
+if (imran == localStorage.getItem("mihabhw")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabhw")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabhx")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabhy")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabhz")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabia")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabib");}
+if (imran == localStorage.getItem("mihabic")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabic")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabid")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabie")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabif")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabig")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabih");}
+if (imran == localStorage.getItem("mihabii")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabii")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabij")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabik")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabil")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabim")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabin");}
+if (imran == localStorage.getItem("mihabio")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabio")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabip")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabiq")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabir")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabis")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabit");}
+if (imran == localStorage.getItem("mihabiu")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabiu")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabiv")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabiw")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabix")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabiy")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabiz");}
+if (imran == localStorage.getItem("mihabja")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabja")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabjb")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabjc")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabjd")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabje")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabjf");}
+if (imran == localStorage.getItem("mihabjg")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabjg")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabjh")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabji")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabjj")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabjk")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabjl");}
+if (imran == localStorage.getItem("mihabjm")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabjm")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabjn")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabjo")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabjp")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabjq")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabjr");}
+if (imran == localStorage.getItem("mihabjs")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabjs")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabjt")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabju")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabjv")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabjw")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabjx");}
+if (imran == localStorage.getItem("mihabjy")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabjy")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabjz")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabka")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabkb")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabkc")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabkd");}
+if (imran == localStorage.getItem("mihabke")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabke")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabkf")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabkg")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabkh")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabki")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabkj");}
+if (imran == localStorage.getItem("mihabkk")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabkk")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabkl")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabkm")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabkn")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabko")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabkp");}
+if (imran == localStorage.getItem("mihabkq")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabkq")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabkr")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabks")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabkt")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabku")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabkv");}
+if (imran == localStorage.getItem("mihabkw")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabkw")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabkx")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabky")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabkz")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabla")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihablb");}
+if (imran == localStorage.getItem("mihablc")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihablc")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabld")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihable")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihablf")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihablg")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihablh");}
+if (imran == localStorage.getItem("mihabli")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabli")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihablj")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihablk")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabll")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihablm")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabln");} 
+if (imran == localStorage.getItem("mihablo")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihablo")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihablp")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihablq")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihablr")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabls")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihablt");}
+if (imran == localStorage.getItem("mihablu")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihablu")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihablv")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihablw")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihablx")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihably")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihablz");}
+if (imran == localStorage.getItem("mihabma")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabma")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabmb")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabmc")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabmd")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabme")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabmf");}
+if (imran == localStorage.getItem("mihabmg")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabmg")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabmh")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabmi")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabmj")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabmk")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabml");}
+if (imran == localStorage.getItem("mihabmm")){
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabmm")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabmn")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabmo")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabmp")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabmq")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabmr");}
+if (imran == localStorage.getItem("mihabms")){
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabms")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabmt")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabmu")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabmv")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabmw")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabmx");}
+if (imran == localStorage.getItem("mihabmy")){
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabmy")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabmz")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabna")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabnb")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabnc")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabnd");}
+if (imran == localStorage.getItem("mihabne")){
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabne")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabnf")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabng")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabnh")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabni")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabnj");}
+if (imran == localStorage.getItem("mihabnk")){
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabnk")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabnl")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabnm")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabnn")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabno")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabnp");}
+if (imran == localStorage.getItem("mihabnq")){
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabnq")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabnr")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabns")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabnt")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabnu")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabnv");}
+if (imran == localStorage.getItem("mihabnw")){
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabnw")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabnx")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabny")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabnz")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihaboa")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabob");}
+if (imran == localStorage.getItem("mihaboc")){
+document.getElementById("demo").innerHTML=localStorage.getItem("mihaboc")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabod")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihaboe")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabof")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabog")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihaboh");}
+if (imran == localStorage.getItem("mihaboi")){
+document.getElementById("demo").innerHTML=localStorage.getItem("mihaboi")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihaboj")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabok")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabol")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabom")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabon");}
+if (imran == localStorage.getItem("mihaboo")){
+document.getElementById("demo").innerHTML=localStorage.getItem("mihaboo")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabop")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihaboq")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabor")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabos")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabot");}
+if (imran == localStorage.getItem("mihabou")){
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabou")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabov")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabow")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabox")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihaboy")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihaboz");}
+if (imran == localStorage.getItem("mihabpa")){
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabpa")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabpb")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabpc")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabpd")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabpe")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabpf");}
+if (imran == localStorage.getItem("mihabpg")){
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabpg")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabph")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabpi")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabpj")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabpk")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabpl");}
+if (imran == localStorage.getItem("mihabpm")){
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabpm")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabpn")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabpo")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabpp")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabpq")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabpr");}
+if (imran == localStorage.getItem("mihabps")){
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabps")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabpt")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabpu")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabpv")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabpw")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabpx");}
+if (imran == localStorage.getItem("mihabpy")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabpy")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabpz")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabqa")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabqb")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabqc")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabqd");}
+if (imran == localStorage.getItem("mihabqe")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabqe")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabqf")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabqg")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabqh")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabqi")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabqj");}
+if (imran == localStorage.getItem("mihabqk")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabqk")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabql")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabqm")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabqn")
+  
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabqo")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabqp");}
+if (imran == localStorage.getItem("mihabqq")){
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabqq")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabqr")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabqs")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabqt")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabqu")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabqv");}
+if (imran == localStorage.getItem("mihabqw")){
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabqw")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabqx")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabqy")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabqz")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabra")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabrb");}
+if (imran == localStorage.getItem("mihabrc")){
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabrc")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabrd")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabre")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabrf")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabrg")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabrh");}
+if (imran == localStorage.getItem("mihabri")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabri")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabrj")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabrk")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabrl")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabrm")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabrn");}
+if (imran == localStorage.getItem("mihabro")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabro")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabrp")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabrq")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabrr")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabrs")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabrt");}
+if (imran == localStorage.getItem("mihabru")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabru")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabrv")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabrw")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabrx")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabry")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabrz");}
+if (imran == localStorage.getItem("mihabsa")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabsa")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabsb")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabsc")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabsd")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabse")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabsf");}
+if (imran == localStorage.getItem("mihabsg")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabsg")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabsh")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabsi")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabsj")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabsk")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabsl");}
+if (imran == localStorage.getItem("mihabsm")){
+
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabsm")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabsn")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabso")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabsp")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabsq")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabsr");}
+if (imran == localStorage.getItem("mihabss")){
+
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabss")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabst")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabsu")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabsv")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabsw")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabsx");}
+if (imran == localStorage.getItem("mihabsy")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabsy")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabsz")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabta")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabtb")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabtc")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabtd");}
+if (imran == localStorage.getItem("mihabte")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabte")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabtf")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabtg")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabth")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabti")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabtj");}
+if (imran == localStorage.getItem("mihabtk")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabtk")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabtl")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabtm")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabtn")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabto")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabtp");}
+if (imran == localStorage.getItem("mihabtq")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabtq")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabtr")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabts")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabtt")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabtu")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabtv");}
+if (imran == localStorage.getItem("mihabtw")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabtw")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabtx")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabty")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabtz")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabua")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabub");}
+if (imran == localStorage.getItem("mihabuc")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabuc")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabud")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabue")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabuf")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabug")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabuh");}
+if (imran == localStorage.getItem("mihabui")){
+
+
+
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabui")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabuj")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabuk")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabul")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabum")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabun");}
+if (imran == localStorage.getItem("mihabuo")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabuo")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabup")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabuq")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabur")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabus")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabut");}
+if (imran == localStorage.getItem("mihabuu")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabuu")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabuv")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabuw")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabux")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabuy")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabuz");}
+if (imran == localStorage.getItem("mihabva")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabva")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabvb")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabvc")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabvd")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabve")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabvf");}
+if (imran == localStorage.getItem("mihabvg")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabvg")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabvh")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabvi")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabvj")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabvk")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabvl");}
+if (imran == localStorage.getItem("mihabvm")){
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabvm")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabvn")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabvo")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabvp")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabvq")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabvr");}
+if (imran == localStorage.getItem("mihabvs")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabvs")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabvt")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabvu")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabvv")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabvw")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabvx");}
+if (imran == localStorage.getItem("mihabvy")){
+
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabvy")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabvz")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabwa")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabwb")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabwc")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabwd");}
+if (imran == localStorage.getItem("mihabwe")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabwe")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabwf")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabwg")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabwh")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabwi")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabwj");}
+if (imran == localStorage.getItem("mihabwk")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabwk")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabwl")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabwm")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabwn")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabwo")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabwp");}
+if (imran == localStorage.getItem("mihabwq")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabwq")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabwr")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabws")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabwt")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabwu")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabwv");}
+if (imran == localStorage.getItem("mihabww")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabww")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabwx")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabwy")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabwz")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabxa")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabxb");}
+if (imran == localStorage.getItem("mihabxc")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabxc")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabxd")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabxe")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabxf")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabxg")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabxh");}
+if (imran == localStorage.getItem("mihabxi")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabxi")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabxj")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabxk")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabxl")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabxm")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabxn");}
+if (imran == localStorage.getItem("mihabxo")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabxo")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabxp")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabxq")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabxr")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabxs")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabxt");}
+if (imran == localStorage.getItem("mihabxu")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabxu")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabxv")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabxw")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabxx")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabxy")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabxz");}
+if (imran == localStorage.getItem("mihabya")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabya")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabyb")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabyc")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabyd")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabye")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabyf");}
+if (imran == localStorage.getItem("mihabyg")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabyg")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabyh")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabyi")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabyj")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabyk")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabyl");}
+if (imran == localStorage.getItem("mihabym")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabym")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabyn")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabyo")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabyp")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabyq")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabyr");}
+if (imran == localStorage.getItem("mihabys")){
+
+
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabys")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabyt")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabyu")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabyv")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabyw")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabyx");}
+if (imran == localStorage.getItem("mihabyy")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabyy")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabyz")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabza")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabzb")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabzc")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabzd");}
+if (imran == localStorage.getItem("mihabze")){
+
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabze")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabzf")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabzg")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabzh")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabzi")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabzj");}
+if (imran == localStorage.getItem("mihabzk")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabzk")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabzl")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabzm")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabzn")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabzo")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabzp");}
+if (imran == localStorage.getItem("mihabzq")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabzq")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabzr")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabzs")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabzt")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabzu")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabzv");}
+if (imran == localStorage.getItem("mihabzw")){
+
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabzw")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabzx")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabzy")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabzz")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabazz")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabbzz");} 
+});
+  </script>
+</html>
