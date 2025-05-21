@@ -91,17 +91,22 @@ function  quantityChanged(event){
 
 
 function addToCartClicked(event){
+  const date = new Date();
+    const hour = date.getHours();
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
     var button = event.target;
     var shopItem = button.parentElement.parentElement;
+    var time = hour+":"+minutes+":"+seconds;
     var id = shopItem.getElementsByClassName('shop-item-id')[0].innerText;
     var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText;
     var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText;
     
-    addItemToCart(id,title,price);
+    addItemToCart(time,id,title,price);
     updateCartTotal();
 }
 
-function addItemToCart(id, title, price){
+function addItemToCart(time, id, title, price){
     var cartRow = document.createElement('tr');
     cartRow.classList.add('cart-row');
     var cartItems = document.getElementsByClassName('cart-items')[0];
@@ -114,17 +119,20 @@ function addItemToCart(id, title, price){
         }
     }
     var cartRowContents = `
-        <td class="cart-item cart-column">
+      <td class="cart-item cart-column">
+            <span class="cart-item-time">${time}</span>                  
+        </td>
+      <td class="cart-item cart-column">
             <span class="cart-item-id">${id}</span>                  
         </td>
-        <td class="cart-item cart-column">
+       <td class="cart-item cart-column">
             <span class="cart-item-title">${title}</span>                  
         </td>
-        <td class="cart-item cart-column">
+      <td class="cart-item cart-column">
             <span class="cart-price cart-column">${price}</span>
         </td>
-        <td class="cart-item cart-column">
-            <input class="cart-quantity-input" type="number" value="1" style="width: 50px">
+      <td class="cart-item cart-column">
+            <input class="cart-quantity-input" type="number" value="1" style="width:50px; height:20px;">
             <button class="btn btn-danger" type="button">Remove</button>
         </td>        
     `;
@@ -147,7 +155,7 @@ function updateCartTotal(){
         var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0];
         var price = parseFloat(priceElement.innerText.replace('Rs ' , ''))
         var quantity = quantityElement.value;
-        total = total + (price * quantity);
+        total = total + price * quantity;
          
     }
     total = Math.round(total * 100 )/100;

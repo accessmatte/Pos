@@ -9,10 +9,10 @@
 <div id="myNav" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div class="overlay-content">
-     <a onclick="categories()">categories</a>
-    <a onclick="Service()">Services</a>
-    <a onclick="sitemap()">sitemap</a>
-    <a onclick="contact()">Contact</a>
+     <a onclick="stock()">stock record</a>
+    <a onclick="Sales()">Sales record</a>
+    <a onclick="order()">order</a>
+    <a onclick="invoice()">invoice</a>
         <br>
   &nbsp;&nbsp;<i onclick="wa()" style="font-size:50px; background-color:#2be784; text-align:center;width:50px;color:white;" class="fa">&#xf232;</i>&nbsp;&nbsp;<i onclick="fb()" style="text-align:center;font-size:50px; width:50px;background-color:#468de7; color:white;" class="fa">&#xf09a;</i><br/><br/>&nbsp;&nbsp;<i onclick="yt()"style="font-size:50px; text-align:center;width:50px;background-color:white; color:red;" class="fa">&#xf16a;</i> &nbsp;&nbsp;<i onclick="inst()" style="font-size:50px; text-align:center;background-color:white; width:50px;color:#f8296c65;" class="fa">&#xf16d;</i>
   </div>
@@ -27,6 +27,7 @@
       <li><a onclick="cart()"><i class="fa fa-shopping-cart"></i></a></li>
     </ul>
   </div></header><br><br><br><br><br><br><br><br><br><body onload="save()">
+
 <form>
 <input type="alphabate" name="age" id="age"> 
 <button style="width:40%; height:40px;" type="button" id="submit"> SEARCH</button>
@@ -37,7 +38,6 @@
 <th>product</th>
 <th>Quantity</th>    
 <th>Price</th>
-<th>status</th>   
 <th>action</th>
 </tr>
 </thead>  
@@ -47,18 +47,17 @@
 <td id ="memo" class="card-title shop-item-title"></td>      
 <td id ="nemo" contenteditable></td>   
 <td id ="kemo" class="card-text shop-item-price"></td>
-<td id ="lemo"></td>      
 <td><button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">sell</button></td>
 </tr>
 </tbody>
 </table> <br><br>
+<div id="retrive">
 <section class="container content-section" id="shopping-cart">
-  
-  <h3 style="text-decoration: underline;text-align: center; margin-bottom: 7%;">Sale recipt</h3>
- 
+<h3 style="text-decoration: underline;text-align: center; margin-bottom: 7%;">Sale recipt</h3>
  <table class="table table-hover table-cart">
   <thead>
     <tr>
+      <th>time</th>
       <th>id</th>
       <th>Item</th>
       <th>Price</th>
@@ -70,40 +69,43 @@
      
   </tbody>
 </table>
-<br><br>
+<br>
     <div class="cart-total"> 
       <strong class="cart-total-title">Total</strong>
       <span  class="cart-total-price" style="text-align: right;">$0</span>
     </div>
- 
-
-    <div class="btn-purchase" style="margin-top: 10%;">
-      <button type="button"  class="btn btn-dark btn-purchase "><i class="fa-solid fa-cart-shopping " style="margin-right: 6%;"></i>PURCHASE</button>
+ </section></div>
+<div class="btn-purchase" style="margin-top: 10%;">
+  <button type="button"  class="btn btn-dark btn-purchase ">SUBMIT</button>
     </div>
-
-</section><!--External JS-->
+<button onclick="sell()" style="width: 49%; font-size:30px;">sale</button>
 <script src="script.js"></script><br><br>
-<div style="height:auto; background-color: #1b1576;"><br>
-  <h1 style="color: #62b6b6; text-align: center;">ACCESMAT</h1>
-<a style="color:#ffffff;" href="tel:0758400124"><li><b>Tell:</b>0758400124 </li></a>
+<div style="height:auto; background-color: #110f0f;"><br>
+  <h1 style="color: #62b6b6; text-align: center;">E-POS</h1>
+  <a style="color:#ffffff;" href="tel:0116575820"><li><b>Tell:</b>0116575820 </li></a>
   <hr >
-   <a style="color:#ffffff;" href="tel:0759415478"><li><b>Tell:</b>0759415478</li></a>
+   <a style="color:#ffffff;" href="tel:0116526921"><li><b>Tell:</b>0116526921</li></a>
    <hr/>
-      <a style="color:#ffffff;" href="mailto:ochienge622@gmail.com"><li><b>email:</b>ochienge622@gmail.com</li></a>
+      <a style="color:#ffffff;" href="mailto:accessmatte@gmail.com"><li><b>email:</b>accessmatte@gmail.com</li></a>
       <hr/>
     <li onclick="sitemap()" style="color:#ffffff;">Nanyuki,kenya</li>
     <br>
     &nbsp;&nbsp;<i onclick="wa()" style="font-size:50px; background-color:#2be784; text-align:center;width:50px;color:white;" class="fa">&#xf232;</i>&nbsp;&nbsp;<i onclick="fb()" style="text-align:center;font-size:50px; width:50px;background-color:#468de7; color:white;" class="fa">&#xf09a;</i>&nbsp;&nbsp;<i onclick="yt()"style="font-size:50px; text-align:center;width:50px;background-color:white; color:red;" class="fa">&#xf16a;</i> &nbsp;&nbsp;<i onclick="inst()" style="font-size:50px; text-align:center;background-color:white; width:50px;color:#f8296c65;" class="fa">&#xf16d;</i>
 <br>
- <h1 style="color: #f7ec94;">INFOMATION</h1>
- <a onclick="account()" style="color:#ffffff;"><b>My account</b></a>
- <hr/>
-  <a onclick="policy()" style="color:#ffffff;"><b>privancy policy</b></a><hr/>
- <a onclick="terms()" style="color:#ffffff;"><b>Terms & Conditions</b></a><hr/>
-  <a onclick="return()" style="color:#ffffff;"><b>Return policy</b></a><hr/>
-   <a onclick="contact()" style="color:#ffffff;"><b>Contact Us</b></a>
 </div>
-<div style="height:auto; background-color: #000000; color:#ffffff;">Copyright 2024 © ACCESMAT Nanyuki,Kenya<br> All Rights Reserved.</div></body>
+<div style="height:auto; background-color: #000000; color:#ffffff;">Copyright 2025 © ACCESMAT Nanyuki,Kenya<br> All Rights Reserved.</div></body>
+<script>
+  function sell(){
+  localStorage.setItem("sale",document.querySelector("div")[06].innerHTML);}
+  function save(){
+   document.getElementById("retrive").innerHTML=localStorage.getItem("sale");
+  }
+</script>
+<script>
+  function save(){
+    
+    document.getElementById("time").innerHTML=}
+   </script>
 <script type="text/javascript">
   function cart(){
  if (localStorage.getItem("a") == "carta"){
@@ -456,23 +458,27 @@ function showSlides() {
     document.getElementById("submit").addEventListener("click", function() {
   const imran=
   document.getElementById("age").value;
-
+if (imran == localStorage.getItem("mihabaa")){
+document.getElementById("demo").innerHTML=localStorage.getItem("mihabaa")
+document.getElementById("memo").innerHTML=localStorage.getItem("mihabab")
+document.getElementById("nemo").innerHTML=localStorage.getItem("mihabac")
+document.getElementById("kemo").innerHTML=localStorage.getItem("mihabad")
+document.getElementById("lemo").innerHTML=localStorage.getItem("mihabae")
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabaf");}
 if (imran == localStorage.getItem("mihabag")){
 document.getElementById("demo").innerHTML=localStorage.getItem("mihabag")
 document.getElementById("memo").innerHTML=localStorage.getItem("mihabah")
 document.getElementById("nemo").innerHTML=localStorage.getItem("mihabai")
 document.getElementById("kemo").innerHTML=localStorage.getItem("mihabaj")
 document.getElementById("lemo").innerHTML=localStorage.getItem("mihabak")
-document.getElementById("pemo").innerHTML=localStorage.getItem("mihabal")
-;}
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabal");}
 if (imran == localStorage.getItem("mihabam")){
 document.getElementById("demo").innerHTML=localStorage.getItem("mihabam")
 document.getElementById("memo").innerHTML=localStorage.getItem("mihaban")
 document.getElementById("nemo").innerHTML=localStorage.getItem("mihabao")
 document.getElementById("kemo").innerHTML=localStorage.getItem("mihabap")
 document.getElementById("lemo").innerHTML=localStorage.getItem("mihabaq")
-document.getElementById("pemo").innerHTML=localStorage.getItem("mihabar")
-;}
+document.getElementById("pemo").innerHTML=localStorage.getItem("mihabar");}
 if (imran == localStorage.getItem("mihabas")){
 document.getElementById("demo").innerHTML=localStorage.getItem("mihabas")
 document.getElementById("memo").innerHTML=localStorage.getItem("mihabat")

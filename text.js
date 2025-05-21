@@ -10,8 +10,8 @@ function contact(){
 function policy(){
    window.location.href = "Policy.html"
 }
-function sitemap(){
-  window.location.href = "Sitemap.html"
+function Sales(){
+  window.location.href = "sales.html"
 }
 function stock(){
 window.location.href = "Record.html"
