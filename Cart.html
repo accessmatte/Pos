@@ -12,7 +12,7 @@
      <a onclick="stock()">stock record</a>
     <a onclick="Sales()">Sales record</a>
     <a onclick="order()">order</a>
-    <a onclick="invoice()">invoice</a>
+    <a onclick="strecived()">stock recived</a>
         <br>
   &nbsp;&nbsp;<i onclick="wa()" style="font-size:50px; background-color:#2be784; text-align:center;width:50px;color:white;" class="fa">&#xf232;</i>&nbsp;&nbsp;<i onclick="fb()" style="text-align:center;font-size:50px; width:50px;background-color:#468de7; color:white;" class="fa">&#xf09a;</i><br/><br/>&nbsp;&nbsp;<i onclick="yt()"style="font-size:50px; text-align:center;width:50px;background-color:white; color:red;" class="fa">&#xf16a;</i> &nbsp;&nbsp;<i onclick="inst()" style="font-size:50px; text-align:center;background-color:white; width:50px;color:#f8296c65;" class="fa">&#xf16d;</i>
   </div>
@@ -30,7 +30,7 @@
 
 <form>
 <input type="alphabate" name="age" id="age"> 
-<button style="width:40%; height:40px;" type="button" id="submit"> SEARCH</button>
+<button onclick="mee()" style="width:40%; height:40px;" type="button" id="submit"> SEARCH</button>
 </form><br><table>
 <thead>
 <tr>
@@ -50,11 +50,10 @@
 <td><button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button">sell</button></td>
 </tr>
 </tbody>
-</table> <br><br>
-<div id="retrive">
+</table><h4 id="timee"></h4>
 <section class="container content-section" id="shopping-cart">
-<h3 style="text-decoration: underline;text-align: center; margin-bottom: 7%;">Sale recipt</h3>
- <table class="table table-hover table-cart">
+<h3 style="text-decoration: underline;text-align: center; margin-bottom: 7%;">Sale recipt</h3><h4 id="time"></h4>
+ <table id="car" class="table table-hover table-cart">
   <thead>
     <tr>
       <th>time</th>
@@ -64,7 +63,7 @@
       <th>Quantity</th>
     </tr>
   </thead>
-  <tbody class="cart-items">
+  <tbody class="cart-items" id="shopping">
     
      
   </tbody>
@@ -72,11 +71,11 @@
 <br>
     <div class="cart-total"> 
       <strong class="cart-total-title">Total</strong>
-      <span  class="cart-total-price" style="text-align: right;">$0</span>
+      <span  class="cart-total-price" style="text-align: right;" id="cart-totals">$0</span>
     </div>
  </section></div>
 <div class="btn-purchase" style="margin-top: 10%;">
-  <button type="button"  class="btn btn-dark btn-purchase ">SUBMIT</button>
+  <button onclick="pdfday()" type="button" style="width: 49%; font-size:30px; float:left;"  class="btn btn-dark btn-purchase ">submit</button>
     </div>
 <button onclick="sell()" style="width: 49%; font-size:30px;">sale</button>
 <script src="script.js"></script><br><br>
@@ -95,336 +94,56 @@
 </div>
 <div style="height:auto; background-color: #000000; color:#ffffff;">Copyright 2025 © ACCESMAT Nanyuki,Kenya<br> All Rights Reserved.</div></body>
 <script>
+  function mee(){
+    localStorage.setItem("salepass",document.getElementById("age").value)
+  }
+  function pdfday(){
+    localStorage.setItem(document.getElementById("timee").innerHTML,document.getElementById("shopping-cart").innerHTML);
+  }
   function sell(){
-  localStorage.setItem("sale",document.querySelector("div")[06].innerHTML);}
+  localStorage.setItem("sale",document.getElementById("shopping").innerHTML);
+  localStorage.setItem("totals",document.getElementById("cart-totals").innerHTML);
+  }
   function save(){
-   document.getElementById("retrive").innerHTML=localStorage.getItem("sale");
+   document.getElementById("shopping").innerHTML=localStorage.getItem("sale");
+   document.getElementById("cart-totals").innerHTML=localStorage.getItem("totals");
   }
 </script>
 <script>
-  function save(){
-    
-    document.getElementById("time").innerHTML=}
-   </script>
-<script type="text/javascript">
-  function cart(){
- if (localStorage.getItem("a") == "carta"){
-   document.getElementById("a").innerHTML="<td>"+localStorage.getItem("aa")+"</td>"+"<td>"+localStorage.getItem("ab")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity1")+"</td>";
- } 
-   if (localStorage.getItem("b")== "cartb"){
-   document.getElementById("b").innerHTML="<td>"+localStorage.getItem("ba")+"</td>"+"<td>"+localStorage.getItem("bb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity2")+"</td>";}
-   if (localStorage.getItem("c")== "cartc"){
-   document.getElementById("c").innerHTML="<td>"+localStorage.getItem("ca")+"</td>"+"<td>"+localStorage.getItem("cb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity3")+"</td>";} 
-   if (localStorage.getItem("d")== "cartd"){
-   document.getElementById("d").innerHTML="<td>"+localStorage.getItem("da")+"</td>"+"<td>"+localStorage.getItem("db")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity4")+"</td>";}
-   if (localStorage.getItem("e")== "carte"){
-   document.getElementById("e").innerHTML="<td>"+localStorage.getItem("ea")+"</td>"+"<td>"+localStorage.getItem("eb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity5")+"</td>";}
-   if (localStorage.getItem("f")== "cartf"){
-   document.getElementById("f").innerHTML="<td>"+localStorage.getItem("fa")+"</td>"+"<td>"+localStorage.getItem("fb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity6")+"</td>";}
-   if (localStorage.getItem("g")== "cartg"){
-   document.getElementById("g").innerHTML="<td>"+localStorage.getItem("ga")+"</td>"+"<td>"+localStorage.getItem("gb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity7")+"</td>";}
-   if (localStorage.getItem("h")== "carth"){
-   document.getElementById("h").innerHTML="<td>"+localStorage.getItem("ha")+"</td>"+"<td>"+localStorage.getItem("hb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity8")+"</td>";}
-   if (localStorage.getItem("i")== "carti"){
-   document.getElementById("i").innerHTML="<td>"+localStorage.getItem("ia")+"</td>"+"<td>"+localStorage.getItem("ib")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity9")+"</td>";}
-   if (localStorage.getItem("j")== "cartj"){
-   document.getElementById("j").innerHTML="<td>"+localStorage.getItem("ja")+"</td>"+"<td>"+localStorage.getItem("jb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity10")+"</td>";}
-   if (localStorage.getItem("k")== "cartk"){
-   document.getElementById("k").innerHTML="<td>"+localStorage.getItem("ka")+"</td>"+"<td>"+localStorage.getItem("kb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity11")+"</td>";}
-   if (localStorage.getItem("l")== "cartl"){
-   document.getElementById("l").innerHTML="<td>"+localStorage.getItem("la")+"</td>"+"<td>"+localStorage.getItem("lb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity12")+"</td>";}
-   if (localStorage.getItem("m")== "cartm"){
-   document.getElementById("m").innerHTML="<td>"+localStorage.getItem("ma")+"</td>"+"<td>"+localStorage.getItem("mb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity13")+"</td>";}
-   if (localStorage.getItem("n")== "cartn"){
-   document.getElementById("n").innerHTML="<td>"+localStorage.getItem("na")+"</td>"+"<td>"+localStorage.getItem("nb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity14")+"</td>";}
-   if (localStorage.getItem("o")== "carto"){
-   document.getElementById("o").innerHTML="<td>"+localStorage.getItem("oa")+"</td>"+"<td>"+localStorage.getItem("ob")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity15")+"</td>";}
-   if (localStorage.getItem("p")== "cartp"){
-   document.getElementById("p").innerHTML="<td>"+localStorage.getItem("pa")+"</td>"+"<td>"+localStorage.getItem("pb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity16")+"</td>";}
-   if (localStorage.getItem("q")== "cartq"){
-   document.getElementById("q").innerHTML="<td>"+localStorage.getItem("qa")+"</td>"+"<td>"+localStorage.getItem("qb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity17")+"</td>";}
-   if (localStorage.getItem("r")== "cartr"){
-   document.getElementById("r").innerHTML="<td>"+localStorage.getItem("ra")+"</td>"+"<td>"+localStorage.getItem("rb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity18")+"</td>";}
-   if (localStorage.getItem("s")== "carts"){
-   document.getElementById("s").innerHTML="<td>"+localStorage.getItem("sa")+"</td>"+"<td>"+localStorage.getItem("sb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity19")+"</td>";}
-   if (localStorage.getItem("t")== "cartt"){
-   document.getElementById("t").innerHTML="<td>"+localStorage.getItem("ta")+"</td>"+"<td>"+localStorage.getItem("tb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity20")+"</td>";}
-   if (localStorage.getItem("u")== "cartu"){
-   document.getElementById("u").innerHTML="<td>"+localStorage.getItem("ua")+"</td>"+"<td>"+localStorage.getItem("ub")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity21")+"</td>";}
-   if (localStorage.getItem("v")== "cartv"){
-   document.getElementById("v").innerHTML="<td>"+localStorage.getItem("va")+"</td>"+"<td>"+localStorage.getItem("vb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity22")+"</td>";}
-   if (localStorage.getItem("w")== "cartw"){
-   document.getElementById("w").innerHTML="<td>"+localStorage.getItem("wa")+"</td>"+"<td>"+localStorage.getItem("wb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity23")+"</td>";}
-   if (localStorage.getItem("x")== "cartx"){
-   document.getElementById("x").innerHTML="<td>"+localStorage.getItem("xa")+"</td>"+"<td>"+localStorage.getItem("xb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity24")+"</td>";}
-   if (localStorage.getItem("y")== "carty"){
-   document.getElementById("y").innerHTML="<td>"+localStorage.getItem("ya")+"</td>"+"<td>"+localStorage.getItem("yb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity25")+"</td>";}
-   if (localStorage.getItem("z")== "cartz"){
-   document.getElementById("z").innerHTML="<td>"+localStorage.getItem("za")+"</td>"+"<td>"+localStorage.getItem("zb")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity26")+"</td>";}
-   if (localStorage.getItem("a1")== "carta1"){
-   document.getElementById("a1").innerHTML="<td>"+localStorage.getItem("ae")+"</td>"+"<td>"+localStorage.getItem("af")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity27")+"</td>";}
-   if (localStorage.getItem("b1")== "cartb1"){
-   document.getElementById("b1").innerHTML="<td>"+localStorage.getItem("be")+"</td>"+"<td>"+localStorage.getItem("bf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity28")+"</td>";}
-   if (localStorage.getItem("c1")== "cartc1"){
-   document.getElementById("c1").innerHTML="<td>"+localStorage.getItem("ce")+"</td>"+"<td>"+localStorage.getItem("cf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity29")+"</td>";}
-   if (localStorage.getItem("d1")== "cartd1"){
-   document.getElementById("d1").innerHTML="<td>"+localStorage.getItem("de")+"</td>"+"<td>"+localStorage.getItem("df")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity30")+"</td>";}
-   if (localStorage.getItem("e1")== "carte1"){
-   document.getElementById("e1").innerHTML="<td>"+localStorage.getItem("ee")+"</td>"+"<td>"+localStorage.getItem("ef")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity31")+"</td>";}
-   if (localStorage.getItem("f1")== "cartf1"){
-   document.getElementById("f1").innerHTML="<td>"+localStorage.getItem("fe")+"</td>"+"<td>"+localStorage.getItem("ff")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity32")+"</td>";}
-   if (localStorage.getItem("g1")== "cartg1"){
-   document.getElementById("g1").innerHTML="<td>"+localStorage.getItem("ge")+"</td>"+"<td>"+localStorage.getItem("gf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity33")+"</td>";}
-   if (localStorage.getItem("h1")== "carth1"){
-   document.getElementById("h1").innerHTML="<td>"+localStorage.getItem("he")+"</td>"+"<td>"+localStorage.getItem("hf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity34")+"</td>";}
-   if (localStorage.getItem("i1")== "carti1"){
-   document.getElementById("i1").innerHTML="<td>"+localStorage.getItem("ie")+"</td>"+"<td>"+localStorage.getItem("if")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity35")+"</td>";}
-   if (localStorage.getItem("j1")== "cartj1"){
-   document.getElementById("j1").innerHTML="<td>"+localStorage.getItem("je")+"</td>"+"<td>"+localStorage.getItem("jf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity36")+"</td>";}
-   if (localStorage.getItem("k1")== "cartk1"){
-   document.getElementById("k1").innerHTML="<td>"+localStorage.getItem("ke")+"</td>"+"<td>"+localStorage.getItem("kf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity37")+"</td>";}
-   if (localStorage.getItem("l1")== "cartl1"){
-   document.getElementById("l1").innerHTML="<td>"+localStorage.getItem("le")+"</td>"+"<td>"+localStorage.getItem("lf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity38")+"</td>";}
-   if (localStorage.getItem("m1")== "cartm1"){
-   document.getElementById("m1").innerHTML="<td>"+localStorage.getItem("me")+"</td>"+"<td>"+localStorage.getItem("mf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity39")+"</td>";}
-   if (localStorage.getItem("n1")== "cartn1"){
-   document.getElementById("n1").innerHTML="<td>"+localStorage.getItem("ne")+"</td>"+"<td>"+localStorage.getItem("nf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity40")+"</td>";}
-   if (localStorage.getItem("o1")== "carto1"){
-   document.getElementById("o1").innerHTML="<td>"+localStorage.getItem("oe")+"</td>"+"<td>"+localStorage.getItem("of")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity41")+"</td>";}
-   if (localStorage.getItem("p1")== "cartp1"){
-   document.getElementById("p1").innerHTML="<td>"+localStorage.getItem("pe")+"</td>"+"<td>"+localStorage.getItem("pf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity42")+"</td>";}
-   if (localStorage.getItem("q1")== "cartq1"){
-   document.getElementById("q1").innerHTML="<td>"+localStorage.getItem("qe")+"</td>"+"<td>"+localStorage.getItem("qf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity43")+"</td>";}
-   if (localStorage.getItem("r1")== "cartr1"){
-   document.getElementById("r1").innerHTML="<td>"+localStorage.getItem("re")+"</td>"+"<td>"+localStorage.getItem("rf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity44")+"</td>";}
-   if (localStorage.getItem("s1")== "carts1"){
-   document.getElementById("s1").innerHTML="<td>"+localStorage.getItem("se")+"</td>"+"<td>"+localStorage.getItem("sf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity45")+"</td>";}
-   if (localStorage.getItem("t1")== "cartt1"){
-   document.getElementById("t1").innerHTML="<td>"+localStorage.getItem("te")+"</td>"+"<td>"+localStorage.getItem("tf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity46")+"</td>";}
-   if (localStorage.getItem("u1")== "cartu1"){
-   document.getElementById("u1").innerHTML="<td>"+localStorage.getItem("ue")+"</td>"+"<td>"+localStorage.getItem("uf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity47")+"</td>";}
-   if (localStorage.getItem("v1")== "cartv1"){
-   document.getElementById("v1").innerHTML="<td>"+localStorage.getItem("ve")+"</td>"+"<td>"+localStorage.getItem("vf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity48")+"</td>";}
-   if (localStorage.getItem("w1")== "cartw1"){
-   document.getElementById("w1").innerHTML="<td>"+localStorage.getItem("we")+"</td>"+"<td>"+localStorage.getItem("wf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity49")+"</td>";}
-   if (localStorage.getItem("x1")== "cartx1"){
-   document.getElementById("x1").innerHTML="<td>"+localStorage.getItem("xe")+"</td>"+"<td>"+localStorage.getItem("xf")+"</td>"+"<td contenteditable>"+localStorage.getItem("quantity50")+"</td>";}
+  const date = new Date();
+  const day = date.getDay();
+  const daay = date.getDate();
+  const month = date.getMonth()+1;
+  const year = date.getFullYear();
+ if (day == "0") {
+   document.getElementById("time").innerHTML="sunday-"+daay+"/"+month+"/"+year;
+   document.getElementById("timee").innerHTML=daay+"/"+month+"/"+year;
+ }
+   if (day == "1") {
+   document.getElementById("time").innerHTML="monday-"+daay+"/"+month+"/"+year;
+   document.getElementById("timee").innerHTML=daay+"/"+month+"/"+year;
    }
-  function cleaar(){ 
-    const firstName = prompt("enter your password");
-    
-    if (firstName == "" || firstName == null) {
-      window.location.href = "Acount.html"
-    } else if(firstName == localStorage.getItem("pasword")) {
- localStorage.removeItem("a")
- localStorage.removeItem("aa")
- localStorage.removeItem("ab")
- localStorage.removeItem("quantity1")
- localStorage.removeItem("b")
- localStorage.removeItem("ba")
- localStorage.removeItem("bb")
- localStorage.removeItem("quantity2")
- localStorage.removeItem("c")
- localStorage.removeItem("ca")
- localStorage.removeItem("cb")
- localStorage.removeItem("quantity3") 
- localStorage.removeItem("d")
- localStorage.removeItem("da")
- localStorage.removeItem("db")
- localStorage.removeItem("quantity4")
- localStorage.removeItem("e")
- localStorage.removeItem("ea")
- localStorage.removeItem("eb")
- localStorage.removeItem("quantity5")
- localStorage.removeItem("f")
- localStorage.removeItem("fa")
- localStorage.removeItem("fb")
- localStorage.removeItem("quantity6")
- localStorage.removeItem("g")
- localStorage.removeItem("ga")
- localStorage.removeItem("gb")
- localStorage.removeItem("quantity7")
- localStorage.removeItem("h")
- localStorage.removeItem("ha")
- localStorage.removeItem("hb")
- localStorage.removeItem("quantity8")
- localStorage.removeItem("i")
- localStorage.removeItem("ia")
- localStorage.removeItem("ib")
- localStorage.removeItem("quantity9")
- localStorage.removeItem("j")
- localStorage.removeItem("ja")
- localStorage.removeItem("jb")
- localStorage.removeItem("quantity10")
- localStorage.removeItem("k")
- localStorage.removeItem("ka")
- localStorage.removeItem("kb")
- localStorage.removeItem("quantity11")
- localStorage.removeItem("l")
- localStorage.removeItem("la")
- localStorage.removeItem("lb")
- localStorage.removeItem("quantity12")
- localStorage.removeItem("m")
- localStorage.removeItem("ma")
- localStorage.removeItem("mb")
- localStorage.removeItem("quantity13")
- localStorage.removeItem("n")
- localStorage.removeItem("na")
- localStorage.removeItem("nb")
- localStorage.removeItem("quantity14")
- localStorage.removeItem("o")
- localStorage.removeItem("oa")
- localStorage.removeItem("ob")
- localStorage.removeItem("quantity15")
- localStorage.removeItem("p")
- localStorage.removeItem("pa")
- localStorage.removeItem("pb")
- localStorage.removeItem("quantity16")
- localStorage.removeItem("q")
- localStorage.removeItem("qa")
- localStorage.removeItem("qb")
- localStorage.removeItem("quantity17")
- localStorage.removeItem("r")
- localStorage.removeItem("ra")
- localStorage.removeItem("rb")
- localStorage.removeItem("quantity18")
- localStorage.removeItem("s")
- localStorage.removeItem("sa")
- localStorage.removeItem("sb")
- localStorage.removeItem("quantity19")
- localStorage.removeItem("t")
- localStorage.removeItem("ta")
- localStorage.removeItem("tb")
- localStorage.removeItem("quantity20")
- localStorage.removeItem("u")
- localStorage.removeItem("ua")
- localStorage.removeItem("ub")
- localStorage.removeItem("quantity21")
- localStorage.removeItem("v")
- localStorage.removeItem("va")
- localStorage.removeItem("vb")
- localStorage.removeItem("quantity22")
- localStorage.removeItem("w")
- localStorage.removeItem("wa")
- localStorage.removeItem("wb")
- localStorage.removeItem("quantity23")
- localStorage.removeItem("x")
- localStorage.removeItem("xa")
- localStorage.removeItem("xb")
- localStorage.removeItem("quantity24")
- localStorage.removeItem("y")
- localStorage.removeItem("ya")
- localStorage.removeItem("yb")
- localStorage.removeItem("quantity25")
- localStorage.removeItem("z")
- localStorage.removeItem("za")
- localStorage.removeItem("zb")
- localStorage.removeItem("quantity26")
- localStorage.removeItem("a1")
- localStorage.removeItem("ae")
- localStorage.removeItem("af")
- localStorage.removeItem("quantity27")
- localStorage.removeItem("b1")
- localStorage.removeItem("be")
- localStorage.removeItem("bf")
- localStorage.removeItem("quantity28")
- localStorage.removeItem("c1")
- localStorage.removeItem("ce")
- localStorage.removeItem("cf")
- localStorage.removeItem("quantity29")
- localStorage.removeItem("d1")
- localStorage.removeItem("de")
- localStorage.removeItem("df")
- localStorage.removeItem("quantity30")
- localStorage.removeItem("e1")
- localStorage.removeItem("ee")
- localStorage.removeItem("ef")
- localStorage.removeItem("quantity31")
- localStorage.removeItem("f1")
- localStorage.removeItem("fe")
- localStorage.removeItem("ff")
- localStorage.removeItem("quantity32")
- localStorage.removeItem("g1")
- localStorage.removeItem("ge")
- localStorage.removeItem("gf")
- localStorage.removeItem("quantity33")
- localStorage.removeItem("h1")
- localStorage.removeItem("he")
- localStorage.removeItem("hf")
- localStorage.removeItem("quantity34")
- localStorage.removeItem("i1")
- localStorage.removeItem("ie")
- localStorage.removeItem("if")
- localStorage.removeItem("quantity35")
- localStorage.removeItem("j1")
- localStorage.removeItem("je")
- localStorage.removeItem("jf")
- localStorage.removeItem("quantity36")
- localStorage.removeItem("k1")
- localStorage.removeItem("ke")
- localStorage.removeItem("kf")
- localStorage.removeItem("quantity37")
- localStorage.removeItem("l1")
- localStorage.removeItem("le")
- localStorage.removeItem("lf")
- localStorage.removeItem("quantity38")
- localStorage.removeItem("m1")
- localStorage.removeItem("me")
- localStorage.removeItem("mf")
- localStorage.removeItem("quantity39")
- localStorage.removeItem("n1")
- localStorage.removeItem("ne")
- localStorage.removeItem("nf")
- localStorage.removeItem("quantity40")
- localStorage.removeItem("o1")
- localStorage.removeItem("oe")
- localStorage.removeItem("of")
- localStorage.removeItem("quantity41")
- localStorage.removeItem("p1")
- localStorage.removeItem("pe")
- localStorage.removeItem("pf")
- localStorage.removeItem("quantity42")
- localStorage.removeItem("q1")
- localStorage.removeItem("qe")
- localStorage.removeItem("qf")
- localStorage.removeItem("quantity43")
- localStorage.removeItem("r1")
- localStorage.removeItem("re")
- localStorage.removeItem("rf")
- localStorage.removeItem("quantity44")
- localStorage.removeItem("s1")
- localStorage.removeItem("se")
- localStorage.removeItem("sf")
- localStorage.removeItem("quantity45")
- localStorage.removeItem("t1")
- localStorage.removeItem("te")
- localStorage.removeItem("tf")
- localStorage.removeItem("quantity46")
- localStorage.removeItem("u1")
- localStorage.removeItem("ue")
- localStorage.removeItem("uf")
- localStorage.removeItem("quantity47")
- localStorage.removeItem("v1")
- localStorage.removeItem("ve")
- localStorage.removeItem("vf")
- localStorage.removeItem("quantity48")
- localStorage.removeItem("w1")
- localStorage.removeItem("we")
- localStorage.removeItem("wf")
- localStorage.removeItem("quantity49")
- localStorage.removeItem("x1")
- localStorage.removeItem("xe")
- localStorage.removeItem("xf")
- localStorage.removeItem("quantity50")
-      document.getElementById("clea").addEventListener("click", function() {
-   const str1 = "<a href='https://api.callmebot.com/whatsapp.php?phone=254114955106&apikey=1304247&text="
-   const str2 = "'><button style='width: 100%; height: 50px;'>submit</button><a/>"
-   const table = document.getElementById("td").innerText
-   document.getElementById("clea").innerHTML =str1+table+str2; });
-    }else {
-      alert("incorrect password!!!")
-    }}
-   </script>
+   if (day == "2") {
+   document.getElementById("time").innerHTML="tuesday-"+daay+"/"+month+"/"+year;
+   document.getElementById("timee").innerHTML=daay+"/"+month+"/"+year;
+   }
+   if (day == "3") {
+   document.getElementById("time").innerHTML="wenesday-"+daay+"/"+month+"/"+year;
+   document.getElementById("timee").innerHTML=daay+"/"+month+"/"+year;
+   }
+   if (day == "4") {
+   document.getElementById("time").innerHTML="thursday-"+daay+"/"+month+"/"+year;
+   document.getElementById("timee").innerHTML=daay+"/"+month+"/"+year;
+   }
+   if (day == "5") {
+   document.getElementById("time").innerHTML="friday-"+daay+"/"+month+"/"+year;
+   document.getElementById("timee").innerHTML=daay+"/"+month+"/"+year;
+   }
+   if (day == "6") {
+   document.getElementById("time").innerHTML="sartuday-"+daay+"/"+month+"/"+year;
+   document.getElementById("timee").innerHTML=daay+"/"+month+"/"+year;
+ }
+  </script>
 <script>
 function openNav() {
   document.getElementById("myNav").style.width = "50%";
@@ -454,7 +173,7 @@ function showSlides() {
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 </script>
-  <script type="text/javascript">
+<script type="text/javascript">
     document.getElementById("submit").addEventListener("click", function() {
   const imran=
   document.getElementById("age").value;
@@ -527,11 +246,6 @@ document.getElementById("kemo").innerHTML=localStorage.getItem("mihabbz")
 document.getElementById("lemo").innerHTML=localStorage.getItem("mihabca")
 document.getElementById("pemo").innerHTML=localStorage.getItem("mihabcb");}
 if (imran == localStorage.getItem("mihabcc")){
-
-
-
-
-
 document.getElementById("demo").innerHTML=localStorage.getItem("mihabcc")
 document.getElementById("memo").innerHTML=localStorage.getItem("mihabcd")
 document.getElementById("nemo").innerHTML=localStorage.getItem("mihabce")

@@ -66,8 +66,9 @@ else{
 
 
  function purchaseClicked(){
-     alert('Thank you for your purchase!!!');
-     var cartItems = document.getElementsByClassName('cart-items')[0];
+    localStorage.removeItem("sale");
+   localStorage.removeItem("totals");
+      var cartItems = document.getElementsByClassName('cart-items')[0];
      while(cartItems.hasChildNodes()){
          cartItems.removeChild(cartItems.firstChild)
      }
@@ -78,7 +79,7 @@ function removeCartItem(event){
     var buttonClicked = event.target;
     buttonClicked.parentElement.parentElement.remove();
     updateCartTotal();
-    
+  
 }
 
 function  quantityChanged(event){
