@@ -204,7 +204,7 @@ img {vertical-align: middle;}
       width: 100%;
     }
   header{
-      position: fixed;
+      position: ;
       top: 0px; /* ticks the side nav to the top */
       left: 0px; /* sticks the side nav to the left side */
       width:100%;  }
